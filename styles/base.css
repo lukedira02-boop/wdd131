@@ -1,0 +1,131 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Roboto,sans-serif;
+    background:#f5f5f5;
+}
+
+header{
+    background:#1d4f7a;
+    color:white;
+}
+
+#course-title{
+    display:block;
+    text-align:center;
+    font-size:2rem;
+    padding:20px;
+    font-family:Merriweather,serif;
+}
+
+nav{
+    display:flex;
+    justify-content:space-around;
+    background:#333;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    padding:15px;
+    width:100%;
+    text-align:center;
+}
+
+nav a:hover{
+    background:#1d4f7a;
+}
+
+main{
+    max-width:1100px;
+    margin:30px auto;
+    padding:20px;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:25px;
+    font-size:2.2rem;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:20px;
+}
+
+.card{
+    background:white;
+    border:1px solid #ccc;
+    border-radius:8px;
+    overflow:hidden;
+}
+
+.card h2{
+    background:#1d4f7a;
+    color:white;
+    text-align:center;
+    padding:12px;
+}
+
+.about{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:20px;
+    padding:20px;
+}
+
+.about-image img{
+    width:100%;
+    border-radius:4px;
+}
+
+hr{
+    width:90%;
+    margin:0 auto 15px;
+}
+
+h3{
+    text-align:center;
+    margin-bottom:15px;
+}
+
+.country{
+    display:grid;
+    grid-template-columns:170px 1fr;
+    gap:20px;
+    padding:20px;
+}
+
+.country img{
+    width:150px;
+}
+
+.caption{
+    text-align:center;
+    font-size:.8rem;
+}
+
+ul{
+    padding:30px;
+}
+
+ul li{
+    margin-bottom:15px;
+}
+
+footer{
+    margin-top:30px;
+    background:#1d4f7a;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+#lastModified{
+    color:yellow;
+}
