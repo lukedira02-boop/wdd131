@@ -1,0 +1,60 @@
+@media screen and (min-width:700px){
+
+
+header {
+
+    width:500px;
+
+}
+
+
+#menuButton {
+
+    display:none;
+
+}
+
+
+nav {
+
+    display:flex;
+    flex-direction:row;
+    gap:25px;
+
+}
+
+
+
+main {
+
+    width:500px;
+
+}
+
+
+.gallery {
+
+
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+
+}
+
+
+figure img {
+
+    width:160px;
+    height:100px;
+    object-fit:cover;
+
+}
+
+
+footer {
+
+    width:500px;
+
+}
+
+
+}
