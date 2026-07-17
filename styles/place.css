@@ -1,0 +1,83 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f2f2f2;
+}
+
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    background: white;
+}
+
+/* Header */
+h1 {
+    background-color: #15566b;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin: 0;
+}
+
+/* Uganda image area */
+.country-image {
+    width: 85%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Data and Weather cards */
+.data,
+.weather {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 20px;
+    border-radius: 12px;
+    position: absolute;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.data {
+    left: 12%;
+    top: 180px;
+    width: 200px;
+}
+
+.weather {
+    right: 12%;
+    top: 450px;
+    width: 200px;
+}
+
+/* Card headings */
+.data h2,
+.weather h2 {
+    background-color: #15566b;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+/* Text */
+.data p,
+.weather p {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+/* Weather icon */
+.weather-icon {
+    display: none;
+}
+
+/* Footer */
+footer {
+    background-color: #15566b;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
