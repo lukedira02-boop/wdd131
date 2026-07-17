@@ -1,17 +1,42 @@
-const temp = 5;
-const wind = 10;
+const temp = 8;
+const wind = 12;
+
 
 function calculateWindChill(temp, wind) {
-    return (13.12 + 0.6215 * temp - 11.37 * wind ** 0.16 + 0.3965 * temp * wind ** 0.16).toFixed(1);
+
+    return (
+        13.12 +
+        0.6215 * temp -
+        11.37 * Math.pow(wind, 0.16) +
+        0.3965 * temp * Math.pow(wind, 0.16)
+
+    ).toFixed(1);
+
 }
+
+
 
 const windChill = document.querySelector("#windChill");
 
+
 if (temp <= 10 && wind > 4.8) {
-    windChill.textContent = `${calculateWindChill(temp, wind)} °C`;
-} else {
-    windChill.textContent = "N/A";
+
+    windChill.textContent =
+        `${calculateWindChill(temp, wind)} °C`;
+
 }
 
-document.getElementById("currentyear").textContent = new Date().getFullYear();
-document.getElementById("lastModified").textContent = document.lastModified;
+else {
+
+    windChill.textContent = "N/A";
+
+}
+
+
+
+document.querySelector("#currentyear").textContent =
+    new Date().getFullYear();
+
+
+document.querySelector("#lastModified").textContent =
+    document.lastModified;

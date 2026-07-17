@@ -1,28 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Uganda Country Page</title>
-    <meta name="description" content="Country page about Uganda">
 
-    <!-- CSS Link -->
+    <meta name="description" content="Explore Uganda, the Pearl of Africa, including its location, population, capital city, culture, and weather information.">
+
+    <meta name="author" content="Dira Luke">
+
     <link rel="stylesheet" href="styles/place.css">
 </head>
 
 <body>
 
-<main>
+<header>
     <h1>Uganda</h1>
+    <nav aria-label="Page navigation">
+        <a href="#data">Country Data</a>
+        <a href="#weather">Weather</a>
+    </nav>
+</header>
 
-    <img 
-        class="country-image"
-        src="images/uganda.webp" 
-        alt="Beautiful landscape of Uganda">
 
-    <section class="data">
+<main class="page-grid">
+
+    <picture class="hero-image-wrapper">
+        <source media="(max-width: 768px)" srcset="images/uganda.webp 768w">
+        <source media="(min-width: 769px)" srcset="images/uganda.webp 1200w">
+        <img
+            class="country-image"
+            src="images/uganda.webp"
+            srcset="images/uganda.webp 768w, images/uganda.webp 1200w"
+            sizes="(max-width: 768px) 100vw, 1000px"
+            alt="Beautiful landscape of Uganda">
+    </picture>
+
+    <section class="data" id="data">
         <h2>Data</h2>
+
         <p><strong>Area:</strong> 587,041 sq km</p>
         <p><strong>Population:</strong> 28.4 Million</p>
         <p><strong>Capital:</strong> Kampala</p>
@@ -31,9 +49,12 @@
         <p><strong>Time Zone:</strong> UTC+3</p>
         <p><strong>Calling Code:</strong> +256</p>
         <p><strong>Internet TLD:</strong> .ug</p>
+
     </section>
 
-    <section class="weather">
+
+    <section class="weather" id="weather">
+
         <h2 class="weather-heading">Weather</h2>
 
         <img
@@ -44,17 +65,30 @@
         <p><strong>Temperature:</strong> 8 °C</p>
         <p><strong>Conditions:</strong> Partly Cloudy</p>
         <p><strong>Wind:</strong> 12 km/h</p>
-        <p><strong>Wind Chill:</strong> <span id="windChill">5.9 °C</span></p>
+        <p>
+            <strong>Wind Chill:</strong>
+            <span id="windChill">N/A</span>
+        </p>
+
     </section>
+
+
 </main>
 
+
 <footer>
-    <p>&copy; 2026 | Dira Luke | Uganda</p>
-    <p>Last Modified: <span id="lastModified"></span></p>
+
+    <p>&copy; <span id="currentyear"></span> | Dira Luke | Uganda</p>
+
+    <p>
+        Last Modified:
+        <span id="lastModified"></span>
+    </p>
+
 </footer>
 
-<!-- JavaScript Link -->
-<script src="scripts/place.js"></script>
+
+<script src="scripts/place.js" defer></script>
 
 </body>
 </html>
