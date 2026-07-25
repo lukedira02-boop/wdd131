@@ -17,12 +17,13 @@ header {
     background: #003366;
     color: white;
     text-align: center;
-    padding: 1rem;
+    padding: 1.5rem;
 }
 
 header h1 {
     margin-bottom: 1rem;
 }
+
 
 /* Navigation */
 nav {
@@ -32,20 +33,21 @@ nav {
     flex-wrap: wrap;
 }
 
-nav button {
+
+nav a {
     background: white;
     color: #003366;
-    border: none;
+    text-decoration: none;
     padding: .7rem 1.2rem;
     border-radius: 5px;
-    cursor: pointer;
     font-weight: bold;
+    transition: .3s;
 }
 
-nav button:hover {
+
+nav a:hover {
     background: #ddd;
 }
-
 /* Main */
 main {
     max-width: 1200px;
