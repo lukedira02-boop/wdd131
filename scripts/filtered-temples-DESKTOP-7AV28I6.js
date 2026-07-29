@@ -54,21 +54,21 @@ const temples = [
     location: "Rome, Italy",
     dedicated: "2019, March, 10",
     area: 41010,
-    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/rome-italy-temple/rome-italy-temple-2642-main.jpg"
+    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/rome-italy-temple/rome-italy-temple-55508-main.jpg"
   },
   {
     templeName: "Accra Ghana Temple",
     location: "Accra, Ghana",
     dedicated: "2004, January, 11",
     area: 17500,
-    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/accra-ghana-temple/accra-ghana-temple-13760-main.jpg"
+    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/accra-ghana-temple/accra-ghana-temple-48475-main.jpg"
   },
   {
     templeName: "Nairobi Kenya Temple",
     location: "Nairobi, Kenya",
     dedicated: "2025, May, 18",
     area: 19800,
-    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/nairobi-kenya-temple/nairobi-kenya-temple-60488-main.jpg"
+    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/nairobi-kenya-temple/nairobi-kenya-temple-62552-main.jpg"
   }
 ];
 
@@ -111,35 +111,30 @@ function getYear(temple) {
 displayTemples(temples);
 
 // Home
-document.querySelector("#home").addEventListener("click", (e) => {
-  e.preventDefault();
+document.querySelector("#home").addEventListener("click", () => {
   displayTemples(temples);
 });
 
 // Old Temples
-document.querySelector("#old").addEventListener("click", (e) => {
-  e.preventDefault();
+document.querySelector("#old").addEventListener("click", () => {
   const oldTemples = temples.filter((temple) => getYear(temple) < 1900);
   displayTemples(oldTemples);
 });
 
 // New Temples
-document.querySelector("#new").addEventListener("click", (e) => {
-  e.preventDefault();
+document.querySelector("#new").addEventListener("click", () => {
   const newTemples = temples.filter((temple) => getYear(temple) > 2000);
   displayTemples(newTemples);
 });
 
 // Large Temples
-document.querySelector("#large").addEventListener("click", (e) => {
-  e.preventDefault();
+document.querySelector("#large").addEventListener("click", () => {
   const largeTemples = temples.filter((temple) => temple.area > 90000);
   displayTemples(largeTemples);
 });
 
 // Small Temples
-document.querySelector("#small").addEventListener("click", (e) => {
-  e.preventDefault();
+document.querySelector("#small").addEventListener("click", () => {
   const smallTemples = temples.filter((temple) => temple.area < 10000);
   displayTemples(smallTemples);
 });

@@ -1,0 +1,191 @@
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #f4f4f4;
+
+    color: #333;
+
+}
+
+
+
+header {
+
+    background: #003366;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 1.5rem;
+
+}
+
+
+
+h1 {
+
+    font-size: 2rem;
+
+}
+
+
+
+.temple-container {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 2rem;
+
+    padding: 2rem;
+
+}
+
+
+
+.temple-card {
+
+    background: white;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+
+    position: relative;
+
+}
+
+
+
+.image-box {
+
+    position: relative;
+
+}
+
+
+
+.image-box img {
+
+    width: 100%;
+
+    height: 370px;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+
+
+
+
+/* Text on top of image */
+
+.temple-info {
+
+    position: absolute;
+
+    bottom: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    padding: 1.2rem;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    color: white;
+
+}
+
+
+
+.temple-info h2 {
+
+    font-size: 1.8rem;
+
+    margin-bottom: .8rem;
+
+    color: white;
+
+}
+
+
+
+.temple-info p {
+
+    font-size: 1rem;
+
+    margin: .4rem 0;
+
+}
+
+
+
+.temple-info strong {
+
+    color: #ffd700;
+
+}
+
+
+
+
+
+/* Mobile */
+
+@media(max-width:900px){
+
+
+
+    .temple-container {
+
+        grid-template-columns: repeat(2,1fr);
+
+    }
+
+}
+
+
+
+
+
+@media(max-width:600px){
+
+
+
+    .temple-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+
+    .image-box img {
+
+        height: 300px;
+
+    }
+
+}

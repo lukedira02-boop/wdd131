@@ -1,0 +1,151 @@
+/* General Reset & Body Styling */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header, footer {
+    background-color: #782499;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+/* Form Container Styling */
+form {
+    background: #ffffff;
+    width: 100%;
+    max-width: 500px;
+    padding: 2rem;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.field {
+    margin-bottom: 1.25rem;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 0.4rem;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+/* Input, Select, and Textarea Controls */
+select, input[type="date"], input[type="text"], textarea {
+    padding: 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+select:focus, input:focus, textarea:focus {
+    border-color: #692b81;
+    outline: none;
+}
+
+/* Fieldset and Legends */
+fieldset {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 0.5rem;
+}
+
+/* Rating Stars Alignment */
+.rating-stars-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.stars-display {
+    font-size: 1.2rem;
+    letter-spacing: 0.8rem;
+    color: #333;
+}
+
+.rating-group {
+    display: flex;
+    gap: 2.1rem;
+}
+
+.rating-group label {
+    cursor: pointer;
+}
+
+/* Checkbox Group Layout */
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.checkbox-group label {
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+/* Helper Indicators */
+.required {
+    color: #d9534f;
+}
+
+.optional {
+    font-weight: normal;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+/* Submit Button Styling */
+.form-submit input[type="submit"] {
+    background-color: #e8e4eb;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 0.8rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s ease;
+}
+
+.form-submit input[type="submit"]:hover {
+    background-color: #d4ccd8;
+}
+
+/* Footer Styling */
+footer p {
+    margin: 0.3rem 0;
+    font-size: 0.9rem;
+}
