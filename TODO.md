@@ -1,15 +1,21 @@
-# TODO: Fix Audit Issues for W05 Form
+# W05 Form Fixes - TODO ✅ ALL DONE
 
 ## Issues Fixed
-1. ✅ Meta Description added to `form.html`
-2. ✅ Meta Author added to `form.html`
-3. ✅ Radio inputs have `id` attributes (star1-star5)
-4. ✅ All 9 form controls have proper `<label>` elements
-5. ✅ CSS Media Queries added to `styles/form.css`
-6. ✅ JS select element ID aligned (productName → product)
-7. ✅ Footer ID alignment (year → currentyear)
 
-## Steps Completed
-- [x] Create `form.html` at root level (with meta tags, radio ids, proper labels)
-- [x] Update `styles/form.css` (add media queries)
-- [x] Update `scripts/form.js` (align select element ID)
+### 1. `styles/form.css` — Fixed CSS class mismatches ✅
+- Changed `.form-submit input[type="submit"]` → `.submit-btn` to match HTML
+- Removed unused CSS classes: `.rating-stars-container`, `.stars-display`, `.rating-group`, `.checkbox-group`
+
+### 2. `review.html` — Added missing meta tags ✅
+- Added `<meta name="description" content="Review Confirmation - WDD 131 - Thank you for submitting your product review.">`
+- Added `<meta name="author" content="Dira Luke">`
+
+### 3. `styles/review.css` — Added media queries ✅
+- Added responsive media queries for tablet (768px) and desktop (1024px)
+
+### 4. `form.html` — Added explicit `for` attributes to checkbox labels ✅
+- Added `for="durability"`, `for="ease"`, `for="performance"`, `for="design"` on checkbox label elements
+
+### 5. Verification ✅
+- All changes verified and complete
+

@@ -75,46 +75,6 @@ legend {
     padding: 0 0.5rem;
 }
 
-/* Rating Stars Alignment */
-.rating-stars-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    margin-top: 0.5rem;
-}
-
-.stars-display {
-    font-size: 1.2rem;
-    letter-spacing: 0.8rem;
-    color: #333;
-}
-
-.rating-group {
-    display: flex;
-    gap: 2.1rem;
-}
-
-.rating-group label {
-    cursor: pointer;
-}
-
-/* Checkbox Group Layout */
-.checkbox-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    margin-top: 0.5rem;
-}
-
-.checkbox-group label {
-    font-weight: normal;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    cursor: pointer;
-}
-
 /* Helper Indicators */
 .required {
     color: #d9534f;
@@ -127,7 +87,7 @@ legend {
 }
 
 /* Submit Button Styling */
-.form-submit input[type="submit"] {
+.submit-btn {
     background-color: #e8e4eb;
     color: #333;
     border: 1px solid #ccc;
@@ -140,7 +100,7 @@ legend {
     transition: background-color 0.2s ease;
 }
 
-.form-submit input[type="submit"]:hover {
+.submit-btn:hover {
     background-color: #d4ccd8;
 }
 
@@ -157,8 +117,8 @@ footer p {
         padding: 2.5rem;
     }
 
-    .rating-group {
-        gap: 3rem;
+    .rating {
+        justify-content: space-evenly;
     }
 
     header h1 {
