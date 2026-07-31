@@ -29,7 +29,7 @@ const products = [
 
 // Populate Product Select Options dynamically
 document.addEventListener("DOMContentLoaded", () => {
-  const selectElement = document.getElementById("productName");
+  const selectElement = document.getElementById("product");
 
   if (selectElement) {
     products.forEach(product => {
