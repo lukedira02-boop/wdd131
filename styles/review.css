@@ -1,74 +1,183 @@
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f7f6;
-    color: #333333;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+/* =========================
+   General Styles
+========================= */
+
+
+* {
+
+    box-sizing: border-box;
+
 }
 
-header, footer {
-    background-color: #0056b3;
-    color: white;
-    text-align: center;
-    padding: 1rem;
+
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    margin: 0;
+
+    background-color: #f4f6f8;
+
+    color: #333;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
 }
+
+
+
+
+header,
+footer {
+
+    background-color: #0056b3;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 1rem;
+
+}
+
+
+
+
+main {
+
+    flex: 1;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 1rem;
+
+}
+
+
+
 
 .confirmation-container {
-    flex: 1;
+
+
+    background-color: white;
+
+    width: 100%;
+
     max-width: 500px;
-    margin: 3rem auto;
-    background: white;
-    padding: 2.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+    padding: 2rem;
+
+    border-radius: 10px;
+
     text-align: center;
+
+
+    box-shadow:
+
+    0 4px 12px rgba(0,0,0,.15);
+
+
 }
+
+
+
+h2 {
+
+    color: #0056b3;
+
+}
+
+
+
 
 .counter-display {
+
+
     font-size: 1.2rem;
+
     font-weight: bold;
-    margin: 1.5rem 0;
-    color: #0056b3;
+
+    margin: 2rem 0;
+
+
 }
+
+
+
+#counter {
+
+    color: #0056b3;
+
+}
+
+
+
+/* Button */
+
 
 .button {
+
+
     display: inline-block;
+
     background-color: #0056b3;
+
     color: white;
-    padding: 0.75rem 1.5rem;
-    border-radius: 4px;
+
     text-decoration: none;
-    margin-top: 1rem;
+
+    padding: .8rem 1.5rem;
+
+    border-radius: 5px;
+
+    font-weight: bold;
+
+
 }
+
+
 
 .button:hover {
-    background-color: #004085;
+
+
+    background-color: #003d82;
+
+
 }
 
-/* Tablet */
-@media (min-width: 768px) {
-    .confirmation-container {
-        padding: 3rem;
-    }
 
-    header h1 {
-        font-size: 2rem;
-    }
+
+/* Footer */
+
+
+footer p {
+
+    margin: .3rem;
+
 }
+
+
 
 /* Desktop */
-@media (min-width: 1024px) {
-    main {
-        max-width: 600px;
-    }
 
-    .confirmation-container {
-        padding: 3.5rem;
-    }
 
-    header h1 {
-        font-size: 2.2rem;
-    }
+@media screen and (min-width:768px){
+
+
+.confirmation-container{
+
+    padding:3rem;
+
+}
+
+
 }

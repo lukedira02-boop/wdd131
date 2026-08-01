@@ -1,143 +1,273 @@
-/* General Reset & Body Styling */
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+/* =========================
+   General Styles
+========================= */
+
+* {
+    box-sizing: border-box;
 }
 
-header, footer {
-    background-color: #782499;
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: #f4f6f8;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+header,
+footer {
+    background-color: #4b0082;
     color: white;
     text-align: center;
     padding: 1rem;
 }
 
+
+
 main {
     flex: 1;
+    padding: 1rem;
     display: flex;
     justify-content: center;
-    padding: 2rem 1rem;
 }
 
-/* Form Container Styling */
+
+
+/* =========================
+   Form Container
+========================= */
+
+
 form {
-    background: #ffffff;
+
     width: 100%;
-    max-width: 500px;
-    padding: 2rem;
-    border-radius: 6px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+
+    box-shadow:
+    0 4px 12px rgba(0,0,0,0.15);
+
 }
 
-.field {
-    margin-bottom: 1.25rem;
-    display: flex;
-    flex-direction: column;
-}
 
-label {
-    margin-bottom: 0.4rem;
-    font-weight: bold;
-    font-size: 0.95rem;
-}
 
-/* Input, Select, and Textarea Controls */
-select, input[type="date"], input[type="text"], textarea {
-    padding: 0.7rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1rem;
-    width: 100%;
-    box-sizing: border-box;
-    background-color: #fff;
-}
 
-select:focus, input:focus, textarea:focus {
-    border-color: #692b81;
-    outline: none;
-}
-
-/* Fieldset and Legends */
 fieldset {
+
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 8px;
     padding: 1rem;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
+
 }
+
+
 
 legend {
+
     font-weight: bold;
-    padding: 0 0.5rem;
+    padding: 0 .5rem;
+
 }
 
-/* Helper Indicators */
+
+
+/* =========================
+   Labels and Inputs
+========================= */
+
+
+label {
+
+    display: block;
+    font-weight: bold;
+    margin-top: 1rem;
+
+}
+
+
+
 .required {
-    color: #d9534f;
+
+    color: red;
+
 }
 
-.optional {
-    font-weight: normal;
-    font-size: 0.85rem;
-    color: #666;
-}
 
-/* Submit Button Styling */
-.submit-btn {
-    background-color: #e8e4eb;
-    color: #333;
-    border: 1px solid #ccc;
-    padding: 0.8rem;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 4px;
-    cursor: pointer;
+
+select,
+input[type="date"],
+input[type="text"],
+textarea {
+
+
     width: 100%;
-    transition: background-color 0.2s ease;
+    padding: .8rem;
+    margin-top: .5rem;
+
+    border: 1px solid #999;
+    border-radius: 5px;
+
+    font-size: 1rem;
+
 }
+
+
+
+textarea {
+
+    resize: vertical;
+
+}
+
+
+
+input:focus,
+select:focus,
+textarea:focus {
+
+    outline: 3px solid #c7a6ff;
+    border-color: #4b0082;
+
+}
+
+
+
+/* =========================
+   Rating Stars
+========================= */
+
+
+.rating {
+
+    display: flex;
+    gap: .5rem;
+    margin-top: 1rem;
+
+}
+
+
+
+.rating input {
+
+    display: none;
+
+}
+
+
+
+.rating label {
+
+    font-size: 2rem;
+    cursor: pointer;
+    color: #777;
+    margin: 0;
+
+}
+
+
+
+.rating input:checked + label {
+
+    color: orange;
+
+}
+
+
+
+/* =========================
+   Checkboxes
+========================= */
+
+
+fieldset label input[type="checkbox"] {
+
+    margin-right: .5rem;
+
+}
+
+
+
+/* =========================
+   Submit Button
+========================= */
+
+
+.submit-btn {
+
+    width: 100%;
+
+    background-color: #4b0082;
+
+    color: white;
+
+    border: none;
+
+    padding: 1rem;
+
+    border-radius: 6px;
+
+    font-size: 1.1rem;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+
 
 .submit-btn:hover {
-    background-color: #d4ccd8;
+
+    background-color: #35005c;
+
 }
 
-/* Footer Styling */
+
+
+
+/* =========================
+   Footer
+========================= */
+
+
 footer p {
-    margin: 0.3rem 0;
-    font-size: 0.9rem;
+
+    margin: .3rem;
+
+    font-size: .9rem;
+
 }
 
-/* Tablet */
-@media (min-width: 768px) {
 
-    form {
-        padding: 2.5rem;
-    }
 
-    .rating {
-        justify-content: space-evenly;
-    }
+/* =========================
+   Larger Screens
+========================= */
 
-    header h1 {
-        font-size: 2rem;
-    }
+
+@media screen and (min-width: 768px) {
+
+
+form {
+
+    padding: 2rem;
+
 }
 
-/* Desktop */
-@media (min-width: 1024px) {
 
-    main {
-        max-width: 800px;
-    }
+header h1 {
 
-    form {
-        padding: 3rem;
-    }
+    font-size: 2.2rem;
 
-    header h1 {
-        font-size: 2.2rem;
-    }
+}
+
+
 }
