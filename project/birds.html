@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Browse a directory of common local birds and learn about their habitats and identification features.">
+
+    <meta name="author"
+          content="Dira Luke">
+
+    <title>Bird Species Directory | Wildlife Guide</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/project.css">
+
+    <script src="scripts/project.js" defer></script>
+
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <a class="brand" href="index.html">
+
+        <span class="brand-mark" aria-hidden="true">
+            🦜
+        </span>
+
+        <span>
+            Wildlife & Bird Watching Guide
+        </span>
+
+    </a>
+
+
+    <button class="menu-button"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false">
+
+        ☰
+
+    </button>
+
+
+    <nav class="main-nav" aria-label="Main navigation">
+
+        <a href="index.html">Home</a>
+
+        <a class="active" href="birds.html">Birds</a>
+
+        <a href="field-notes.html">Field Notes</a>
+
+        <a href="resources.html">Resources</a>
+
+    </nav>
+
+</header>
+
+
+<main>
+
+    <section class="page-banner">
+
+        <p class="eyebrow">
+            Species Directory
+        </p>
+
+        <h1>
+            Meet the Birds
+        </h1>
+
+        <p>
+            Explore common birds and learn about their habitats
+            and identifying characteristics.
+        </p>
+
+    </section>
+
+
+    <section class="section">
+
+        <div class="filter-bar">
+
+            <label for="habitat-filter">
+                Filter by habitat
+            </label>
+
+            <select id="habitat-filter">
+
+                <option value="all">
+                    All habitats
+                </option>
+
+                <option value="wetland">
+                    Wetland
+                </option>
+
+                <option value="woodland">
+                    Woodland
+                </option>
+
+                <option value="grassland">
+                    Grassland
+                </option>
+
+                <option value="urban">
+                    Urban & Garden
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div id="bird-directory"
+             class="bird-grid"
+             aria-live="polite">
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="site-footer">
+
+    <p>
+        &copy; 2026 Dira Luke |
+        Wildlife & Bird Watching Guide
+    </p>
+
+    <a href="references.html">
+        References
+    </a>
+
+</footer>
+
+</body>
+</html>
