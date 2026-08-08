@@ -155,7 +155,13 @@ a {
             135deg,
             #7A9A76,
             #2C5E3B
-        );
+        ),
+        url('images/landscape_hazarikhil.jpg'),
+        url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Landscape_of_Hazarikhil_Wildlife_Sanctuary_%28HWS%29.jpg/960px-Landscape_of_Hazarikhil_Wildlife_Sanctuary_%28HWS%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
     color: var(--white);
 }
@@ -511,6 +517,9 @@ textarea {
     position: relative;
 
     overflow: hidden;
+
+    background-size: cover;
+    background-position: center;
 }
 
 
@@ -524,6 +533,18 @@ textarea {
     text-shadow:
         45px -10px 0
         rgba(255, 255, 255, 0.8);
+}
+
+
+.bird-art.bird-image::after {
+    display: none;
+}
+
+.bird-art img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 

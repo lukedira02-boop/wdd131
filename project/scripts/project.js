@@ -48,6 +48,11 @@ const birds = [
 
         clue:
             "Look near water and watch for a strong hooked bill and broad wings."
+        ,
+        imageUrl:
+            "images/african_fish_eagle.jpg",
+        remoteUrl:
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/African_fish_eagle_%28Haliaeetus_vocifer%29_Ethiopia.jpg/960px-African_fish_eagle_%28Haliaeetus_vocifer%29_Ethiopia.jpg"
     },
 
 
@@ -61,6 +66,11 @@ const birds = [
 
         clue:
             "Check quiet water edges and branches used as hunting perches."
+        ,
+        imageUrl:
+            "images/malachite_kingfisher.jpg",
+        remoteUrl:
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Common_Kingfisher_Alcedo_atthis.jpg/960px-Common_Kingfisher_Alcedo_atthis.jpg"
     },
 
 
@@ -74,6 +84,11 @@ const birds = [
 
         clue:
             "Look for active colonies and carefully woven hanging nests."
+        ,
+        imageUrl:
+            "images/village_weaver.jpg",
+        remoteUrl:
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Village_weaver_%28Ploceus_cucullatus_cucullatus%29_male.jpg/960px-Village_weaver_%28Ploceus_cucullatus_cucullatus%29_male.jpg"
     },
 
 
@@ -86,7 +101,12 @@ const birds = [
             "A distinctive crane associated with open habitats and wetlands.",
 
         clue:
-            "Its tall shape and crown-like head markings make it easier to recognize."
+            "Its tall shape and crown-like head markings make it easier to recognize.",
+
+        imageUrl:
+            "images/grey_crowned_crane.jpg",
+        remoteUrl:
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Grey_crowned_crane_%28Balearica_regulorum_gibbericeps%29_Echuya_Uganda.jpg/960px-Grey_crowned_crane_%28Balearica_regulorum_gibbericeps%29_Echuya_Uganda.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
     },
 
 
@@ -100,6 +120,11 @@ const birds = [
 
         clue:
             "Watch shaded trees for quick movements between branches."
+        ,
+        imageUrl:
+            "images/african_paradise_flycatcher.jpg",
+        remoteUrl:
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/African_Paradise_Flycatcher_-_Kenya_NH8O0536_%2818822382274%29.jpg/960px-African_Paradise_Flycatcher_-_Kenya_NH8O0536_%2818822382274%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
     },
 
 
@@ -113,6 +138,11 @@ const birds = [
 
         clue:
             "Listen for calls in gardens, shrubs, and leafy areas."
+        ,
+        imageUrl:
+            "images/common_bulbul.jpg",
+        remoteUrl:
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Common_bulbul_%28Pycnonotus_barbatus_barbatus%29.jpg/960px-Common_bulbul_%28Pycnonotus_barbatus_barbatus%29.jpg"
     }
 
 ];
@@ -169,11 +199,17 @@ function renderBirds(list) {
 
         <article class="card">
 
+            ${bird.imageUrl ? `
+            <figure class="bird-art bird-one bird-image">
+                <img src="${bird.imageUrl}" alt="${bird.name}" loading="lazy" onerror="this.onerror=null;this.src='${bird.remoteUrl || ''}';">
+            </figure>
+            ` : `
             <div
                 class="bird-art bird-one"
                 role="img"
                 aria-label="${bird.name} illustration">
             </div>
+            `}
 
             <div class="card-body">
 
@@ -323,22 +359,12 @@ if (recommendButton) {
         "click",
         () => {
 
-            const season =
-                document.querySelector(
-                    "#season"
-                ).value;
+            const seasonEl = document.querySelector("#season");
+            const weatherEl = document.querySelector("#time-weather");
+            const recommendation = document.querySelector("#recommendation");
 
-
-            const weather =
-                document.querySelector(
-                    "#time-weather"
-                ).value;
-
-
-            const recommendation =
-                document.querySelector(
-                    "#recommendation"
-                );
+            const season = seasonEl ? seasonEl.value : "";
+            const weather = weatherEl ? weatherEl.value : "";
 
 
             const result =
@@ -348,17 +374,19 @@ if (recommendButton) {
                 );
 
 
-            recommendation.innerHTML = `
+            if (recommendation) {
+                recommendation.innerHTML = `
 
-                <strong>
-                    Recommendation:
-                </strong>
+                    <strong>
+                        Recommendation:
+                    </strong>
 
-                <p>
-                    ${result}
-                </p>
+                    <p>
+                        ${result}
+                    </p>
 
-            `;
+                `;
+            }
 
         }
     );
@@ -566,10 +594,10 @@ if (sightingForm) {
             renderSightings();
 
 
-            document.querySelector(
-                "#form-message"
-            ).textContent =
-                "Your bird sighting was saved on this device.";
+            const formMessageEl = document.querySelector("#form-message");
+            if (formMessageEl) {
+                formMessageEl.textContent = "Your bird sighting was saved on this device.";
+            }
 
 
             sightingForm.reset();
