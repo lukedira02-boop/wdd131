@@ -31,118 +31,72 @@ if (menuButton && mainNav) {
 
 }
 
-
-/* =========================================
-   BIRD DATA
-========================================= */
-
 const birds = [
 
     {
         name: "African Fish Eagle",
-
         habitat: "wetland",
-
-        description:
-            "A large raptor commonly associated with lakes, rivers, and other water-rich habitats.",
-
-        clue:
-            "Look near water and watch for a strong hooked bill and broad wings."
-        ,
-        imageUrl:
-            "images/african_fish_eagle.jpg",
-        remoteUrl:
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/African_fish_eagle_%28Haliaeetus_vocifer%29_Ethiopia.jpg/960px-African_fish_eagle_%28Haliaeetus_vocifer%29_Ethiopia.jpg"
+        description: "A large raptor commonly associated with lakes, rivers, and other water-rich habitats.",
+        clue: "Look near water and watch for a strong hooked bill and broad wings.",
+        imageUrl: "images/fish-eagle.webp",
+        remoteUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/African_fish_eagle_%28Haliaeetus_vocifer%29_Ethiopia.jpg/960px-African_fish_eagle_%28Haliaeetus_vocifer%29_Ethiopia.jpg",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/African_fish_eagle_%28Haliaeetus_vocifer%29_Ethiopia.jpg/960px-African_fish_eagle_%28Haliaeetus_vocifer%29_Ethiopia.jpg",
+        alt: "African Fish Eagle near a wetland"
     },
-
 
     {
         name: "Malachite Kingfisher",
-
         habitat: "wetland",
-
-        description:
-            "A small colorful kingfisher often found close to water where it can hunt for fish.",
-
-        clue:
-            "Check quiet water edges and branches used as hunting perches."
-        ,
-        imageUrl:
-            "images/malachite_kingfisher.jpg",
-        remoteUrl:
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Common_Kingfisher_Alcedo_atthis.jpg/960px-Common_Kingfisher_Alcedo_atthis.jpg"
+        description: "A small colorful kingfisher often found close to water where it can hunt for fish.",
+        clue: "Check quiet water edges and branches used as hunting perches.",
+        imageUrl: "images/kingfisher.webp",
+        remoteUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Common_Kingfisher_Alcedo_atthis.jpg/960px-Common_Kingfisher_Alcedo_atthis.jpg",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Common_Kingfisher_Alcedo_atthis.jpg/960px-Common_Kingfisher_Alcedo_atthis.jpg",
+        alt: "Malachite Kingfisher perched near water"
     },
-
 
     {
         name: "Village Weaver",
-
         habitat: "urban",
-
-        description:
-            "A social weaver that can be seen around gardens, farms, wetlands, and settlements.",
-
-        clue:
-            "Look for active colonies and carefully woven hanging nests."
-        ,
-        imageUrl:
-            "images/village_weaver.jpg",
-        remoteUrl:
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Village_weaver_%28Ploceus_cucullatus_cucullatus%29_male.jpg/960px-Village_weaver_%28Ploceus_cucullatus_cucullatus%29_male.jpg"
+        description: "A social weaver that can be seen around gardens, farms, wetlands, and settlements.",
+        clue: "Look for active colonies and carefully woven hanging nests.",
+        imageUrl: "images/village_weaver.jpg",
+        remoteUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Village_weaver_%28Ploceus_cucullatus_cucullatus%29_male.jpg/960px-Village_weaver_%28Ploceus_cucullatus_cucullatus%29_male.jpg",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Village_weaver_%28Ploceus_cucullatus_cucullatus%29_male.jpg/960px-Village_weaver_%28Ploceus_cucullatus_cucullatus%29_male.jpg",
+        alt: "Village Weaver near a nest"
     },
-
 
     {
         name: "Grey Crowned Crane",
-
         habitat: "grassland",
-
-        description:
-            "A distinctive crane associated with open habitats and wetlands.",
-
-        clue:
-            "Its tall shape and crown-like head markings make it easier to recognize.",
-
-        imageUrl:
-            "images/grey_crowned_crane.jpg",
-        remoteUrl:
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Grey_crowned_crane_%28Balearica_regulorum_gibbericeps%29_Echuya_Uganda.jpg/960px-Grey_crowned_crane_%28Balearica_regulorum_gibbericeps%29_Echuya_Uganda.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+        description: "A distinctive crane associated with open habitats and wetlands.",
+        clue: "Its tall shape and crown-like head markings make it easier to recognize.",
+        imageUrl: "images/grey_crowned_crane.jpg",
+        remoteUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Grey_crowned_crane_%28Balearica_regulorum_gibbericeps%29_Echuya_Uganda.jpg/960px-Grey_crowned_crane_%28Balearica_regulorum_gibbericeps%29_Echuya_Uganda.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Grey_crowned_crane_%28Balearica_regulorum_gibbericeps%29_Echuya_Uganda.jpg/960px-Grey_crowned_crane_%28Balearica_regulorum_gibbericeps%29_Echuya_Uganda.jpg",
+        alt: "Grey Crowned Crane in Uganda"
     },
-
 
     {
         name: "African Paradise Flycatcher",
-
         habitat: "woodland",
-
-        description:
-            "A woodland bird known for its elegant appearance and active insect hunting.",
-
-        clue:
-            "Watch shaded trees for quick movements between branches."
-        ,
-        imageUrl:
-            "images/african_paradise_flycatcher.jpg",
-        remoteUrl:
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/African_Paradise_Flycatcher_-_Kenya_NH8O0536_%2818822382274%29.jpg/960px-African_Paradise_Flycatcher_-_Kenya_NH8O0536_%2818822382274%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+        description: "A woodland bird known for its elegant appearance and active insect hunting.",
+        clue: "Watch shaded trees for quick movements between branches.",
+        imageUrl: "images/african_paradise_flycatcher.jpg",
+        remoteUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/African_Paradise_Flycatcher_-_Kenya_NH8O0536_%2818822382274%29.jpg/960px-African_Paradise_Flycatcher_-_Kenya_NH8O0536_%2818822382274%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/African_Paradise_Flycatcher_-_Kenya_NH8O0536_%2818822382274%29.jpg/960px-African_Paradise_Flycatcher_-_Kenya_NH8O0536_%2818822382274%29.jpg",
+        alt: "African Paradise Flycatcher in woodland"
     },
-
 
     {
         name: "Common Bulbul",
-
         habitat: "urban",
-
-        description:
-            "A familiar garden and woodland bird that feeds on fruit, insects, and other food sources.",
-
-        clue:
-            "Listen for calls in gardens, shrubs, and leafy areas."
-        ,
-        imageUrl:
-            "images/common_bulbul.jpg",
-        remoteUrl:
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Common_bulbul_%28Pycnonotus_barbatus_barbatus%29.jpg/960px-Common_bulbul_%28Pycnonotus_barbatus_barbatus%29.jpg"
+        description: "A familiar garden and woodland bird that feeds on fruit, insects, and other food sources.",
+        clue: "Listen for calls in gardens, shrubs, and leafy areas.",
+        imageUrl: "images/common_bulbul.jpg",
+        remoteUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Common_bulbul_%28Pycnonotus_barbatus_barbatus%29.jpg/960px-Common_bulbul_%28Pycnonotus_barbatus_barbatus%29.jpg",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Common_bulbul_%28Pycnonotus_barbatus_barbatus%29.jpg/960px-Common_bulbul_%28Pycnonotus_barbatus_barbatus%29.jpg",
+        alt: "Common Bulbul in garden"
     }
 
 ];
@@ -199,9 +153,9 @@ function renderBirds(list) {
 
         <article class="card">
 
-            ${bird.imageUrl ? `
+            ${bird.image ? `
             <figure class="bird-art bird-one bird-image">
-                <img src="${bird.imageUrl}" alt="${bird.name}" loading="lazy" onerror="this.onerror=null;this.src='${bird.remoteUrl || ''}';">
+                <img src="${bird.image}" alt="${bird.alt || bird.name}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='images/hero.webp';">
             </figure>
             ` : `
             <div

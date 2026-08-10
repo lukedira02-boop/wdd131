@@ -147,6 +147,31 @@
     </a>
 
 </footer>
+<script>
+    // Fixup legacy/broken local image filenames that may still be referenced.
+    (function(){
+        function fix() {
+            var fixes = {
+                'african_fish_eagle.jpg': 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/African_fish_eagle_%28Haliaeetus_vocifer%29_Ethiopia.jpg/960px-African_fish_eagle_%28Haliaeetus_vocifer%29_Ethiopia.jpg',
+                'malachite_kingfisher.jpg': 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Common_Kingfisher_Alcedo_atthis.jpg/960px-Common_Kingfisher_Alcedo_atthis.jpg'
+            };
+
+            document.querySelectorAll('img').forEach(function(img){
+                try {
+                    var src = img.getAttribute('src') || '';
+                    Object.keys(fixes).forEach(function(k){
+                        if (src.indexOf(k) !== -1) {
+                            img.src = fixes[k];
+                        }
+                    });
+                } catch(e){}
+            });
+        }
+
+        if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', fix);
+        else fix();
+    })();
+</script>
 
 </body>
 </html>

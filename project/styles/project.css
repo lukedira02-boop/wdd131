@@ -156,7 +156,7 @@ a {
             #7A9A76,
             #2C5E3B
         ),
-        url('images/landscape_hazarikhil.jpg'),
+        url('../images/hero.webp'),
         url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Landscape_of_Hazarikhil_Wildlife_Sanctuary_%28HWS%29.jpg/960px-Landscape_of_Hazarikhil_Wildlife_Sanctuary_%28HWS%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail');
 
     background-size: cover;
