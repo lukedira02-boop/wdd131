@@ -1,11 +1,9 @@
 /* =========================================
    WILDLIFE & BIRD WATCHING GUIDE
-   WDD 131 PROJECT
+   WDD 131 PROJECT - FINAL VERSION
 ========================================= */
 
-
 /* ---------- VARIABLES ---------- */
-
 :root {
     --green: #2C5E3B;
     --sand: #D4A373;
@@ -15,22 +13,20 @@
     --ink: #243028;
     --muted: #5D665F;
     --border: #D8D8D0;
+    --shadow: rgba(36, 48, 40, 0.08);
+    --radius: 0.7rem;
 }
 
-
 /* ---------- RESET ---------- */
-
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-
 html {
     scroll-behavior: smooth;
 }
-
 
 body {
     font-family: "Roboto", Arial, sans-serif;
@@ -39,72 +35,57 @@ body {
     line-height: 1.6;
 }
 
-
 img {
     display: block;
     max-width: 100%;
     height: auto;
 }
 
-
 a {
     color: var(--green);
 }
 
-
 /* ---------- HEADER ---------- */
-
 .site-header {
     background-color: var(--green);
     color: var(--white);
     min-height: 72px;
     padding: 0.9rem 5%;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     gap: 1rem;
 }
-
 
 .brand {
     color: var(--white);
     text-decoration: none;
-
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
-
     display: flex;
     align-items: center;
     gap: 0.55rem;
 }
 
-
 .brand-mark {
     font-size: 1.7rem;
 }
 
-
 /* ---------- NAVIGATION ---------- */
-
 .main-nav {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
-
 .main-nav a {
     color: var(--white);
     text-decoration: none;
     font-weight: 500;
-
     padding: 0.4rem 0.2rem;
-
     border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
 }
-
 
 .main-nav a:hover,
 .main-nav a.active {
@@ -112,149 +93,102 @@ a {
     border-bottom-color: var(--sand);
 }
 
-
-/* ---------- MOBILE MENU BUTTON ---------- */
-
+/* ---------- MOBILE MENU ---------- */
 .menu-button {
     display: none;
-
     background: transparent;
     border: 0;
-
     color: var(--white);
-
     font-size: 1.7rem;
-
     cursor: pointer;
 }
 
-
 /* ---------- HERO ---------- */
-
 .hero {
     min-height: 520px;
-
     display: grid;
     place-items: center;
-
     text-align: center;
-
     padding: 3rem 5%;
-
-    background:
-        linear-gradient(
-            rgba(44, 94, 59, 0.75),
-            rgba(44, 94, 59, 0.55)
-        ),
-        radial-gradient(
-            circle at 25% 25%,
-            #D4A373 0,
-            transparent 28%
-        ),
-        linear-gradient(
-            135deg,
-            #7A9A76,
-            #2C5E3B
-        ),
-        url('../images/hero.webp'),
-        url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Landscape_of_Hazarikhil_Wildlife_Sanctuary_%28HWS%29.jpg/960px-Landscape_of_Hazarikhil_Wildlife_Sanctuary_%28HWS%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail');
-
+    background: 
+        linear-gradient(rgba(44, 94, 59, 0.75), rgba(44, 94, 59, 0.55)),
+        radial-gradient(circle at 25% 25%, #D4A373 0%, transparent 28%),
+        linear-gradient(135deg, #7A9A76, #2C5E3B),
+        url('../images/hero.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
     color: var(--white);
 }
-
 
 .hero-content {
     max-width: 760px;
 }
 
-
 .hero h1 {
     font-family: "Montserrat", sans-serif;
-
-    font-size: clamp(
-        2.2rem,
-        6vw,
-        4.5rem
-    );
-
+    font-size: clamp(2.2rem, 6vw, 4.5rem);
     line-height: 1.15;
-
     margin: 0.5rem 0 1rem;
 }
 
-
 .hero p:not(.eyebrow) {
     max-width: 650px;
-
     margin: 0 auto 1.5rem;
-
     font-size: 1.1rem;
 }
 
-
 /* ---------- EYEBROW ---------- */
-
 .eyebrow {
     text-transform: uppercase;
-
     letter-spacing: 0.12em;
-
     font-weight: 700;
-
     font-size: 0.8rem;
 }
 
-
-/* ---------- BUTTON ---------- */
-
+/* ---------- BUTTONS ---------- */
 .button {
     display: inline-block;
-
     border: 0;
-
     background-color: var(--rust);
-
     color: var(--white);
-
     text-decoration: none;
-
     padding: 0.75rem 1.2rem;
-
     border-radius: 0.35rem;
-
     font-weight: 700;
-
     cursor: pointer;
+    transition: background-color 0.2s;
 }
-
 
 .button:hover {
     background-color: #8F3F30;
 }
 
-
 .secondary-button {
     background-color: var(--green);
 }
 
-
-/* ---------- SECTIONS ---------- */
-
-.section {
-    width: min(1100px, 90%);
-
-    margin: 3rem auto;
+.secondary-button:hover {
+    background-color: #1e4529;
 }
 
+.danger-button {
+    background-color: var(--rust);
+}
+
+.danger-button:hover {
+    background-color: #8F3F30;
+}
+
+/* ---------- SECTIONS ---------- */
+.section {
+    width: min(1100px, 90%);
+    margin: 3rem auto;
+}
 
 .section-heading {
     margin-bottom: 1.5rem;
 }
-
 
 .section-heading h2,
 .safety-section h2,
@@ -262,57 +196,38 @@ a {
 .recommendation-card h2,
 .reference-list h2 {
     font-family: "Montserrat", sans-serif;
-
     color: var(--green);
-
     margin-top: 0.25rem;
 }
 
-
 /* ---------- GRIDS ---------- */
-
 .fact-grid,
 .feature-grid,
-.bird-grid {
+.bird-grid,
+.gallery-grid {
     display: grid;
-
     gap: 1.25rem;
 }
 
-
-.fact-grid {
-    grid-template-columns:
-        repeat(3, 1fr);
+.fact-grid,
+.feature-grid,
+.bird-grid,
+.gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
 }
-
-
-.feature-grid {
-    grid-template-columns:
-        repeat(3, 1fr);
-}
-
 
 .feature-grid .bird-art {
     min-height: 250px;
     height: 250px;
 }
 
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.25rem;
-}
-
-
 .gallery-card {
     overflow: hidden;
-    border-radius: 0.7rem;
+    border-radius: var(--radius);
     background-color: var(--white);
     border: 1px solid var(--border);
-    box-shadow: 0 4px 14px rgba(36, 48, 40, 0.08);
+    box-shadow: 0 4px 14px var(--shadow);
 }
-
 
 .gallery-card img {
     width: 100%;
@@ -321,36 +236,20 @@ a {
     display: block;
 }
 
-
 .gallery-card figcaption {
     padding: 1rem;
     font-size: 0.95rem;
     color: var(--muted);
 }
 
-
-.bird-grid {
-    grid-template-columns:
-        repeat(3, 1fr);
-}
-
-
 /* ---------- CARDS ---------- */
-
 .card {
     background-color: var(--white);
-
     border: 1px solid var(--border);
-
-    border-radius: 0.7rem;
-
+    border-radius: var(--radius);
     overflow: hidden;
-
-    box-shadow:
-        0 4px 14px
-        rgba(36, 48, 40, 0.08);
+    box-shadow: 0 4px 14px var(--shadow);
 }
-
 
 .card-body,
 .fact-card,
@@ -360,218 +259,42 @@ a {
     padding: 1.4rem;
 }
 
-
 .card h2,
 .card h3 {
     font-family: "Montserrat", sans-serif;
-
     color: var(--green);
-
     margin-bottom: 0.5rem;
 }
-
 
 .card-icon {
     display: inline-block;
-
     font-size: 2rem;
-
     margin-bottom: 0.5rem;
 }
 
-
-/* ---------- TINTED SECTION ---------- */
-
-.tinted {
-    background-color:
-        rgba(212, 163, 115, 0.22);
-
-    padding: 2rem;
-
-    border-radius: 0.7rem;
-}
-
-
-/* ---------- SAFETY ---------- */
-
-.safety-section {
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    gap: 2rem;
-
-    background-color: var(--white);
-
-    padding: 2rem;
-
-    border-left: 7px solid var(--rust);
-
-    border-radius: 0.7rem;
-}
-
-
-.check-list {
-    list-style: none;
-
-    margin-top: 1rem;
-}
-
-
-.check-list li {
-    margin: 0.7rem 0;
-
-    padding-left: 1.6rem;
-
-    position: relative;
-}
-
-
-.check-list li::before {
-    content: "✓";
-
-    color: var(--rust);
-
-    font-weight: 700;
-
-    position: absolute;
-
-    left: 0;
-}
-
-
-/* ---------- PAGE BANNER ---------- */
-
-.page-banner {
-    background-color: var(--green);
-
-    color: var(--white);
-
-    text-align: center;
-
-    padding: 4rem 5%;
-}
-
-
-.page-banner h1 {
-    font-family: "Montserrat", sans-serif;
-
-    font-size: clamp(
-        2rem,
-        5vw,
-        3.5rem
-    );
-
-    line-height: 1.15;
-
-    margin: 0.4rem 0;
-}
-
-
-/* ---------- TWO COLUMN ---------- */
-
-.two-column {
-    display: grid;
-
-    grid-template-columns:
-        1fr 1fr;
-
-    gap: 1.5rem;
-}
-
-
-/* ---------- FILTER ---------- */
-
-.filter-bar {
-    background-color: var(--white);
-
-    border: 1px solid var(--border);
-
-    padding: 1rem;
-
-    margin-bottom: 1.5rem;
-
-    border-radius: 0.5rem;
-}
-
-
-/* ---------- FORM ---------- */
-
-label {
-    display: block;
-
-    font-weight: 700;
-
-    margin-bottom: 1rem;
-}
-
-
-input,
-select,
-textarea {
-    width: 100%;
-
-    margin-top: 0.35rem;
-
-    padding: 0.75rem;
-
-    border: 1px solid #A9AFA9;
-
-    border-radius: 0.35rem;
-
-    font: inherit;
-
-    background-color: var(--white);
-}
-
-
-input:focus,
-select:focus,
-textarea:focus {
-    outline: 3px solid
-        rgba(212, 163, 115, 0.55);
-
-    border-color: var(--green);
-}
-
-
-textarea {
-    resize: vertical;
-}
-
-
-/* ---------- BIRD ART ---------- */
-
+/* ---------- BIRD ART (Unified) ---------- */
 .bird-art {
     min-height: 150px;
-
     display: grid;
-
     place-items: center;
-
     position: relative;
-
     overflow: hidden;
-
     background-size: cover;
     background-position: center;
 }
 
-
-.bird-art::after {
-    content: "●";
-
-    font-size: 4.5rem;
-
-    color: var(--white);
-
-    text-shadow:
-        45px -10px 0
-        rgba(255, 255, 255, 0.8);
+/* Unified bird art backgrounds using CSS variables */
+.bird-art[data-bird="1"] {
+    background: linear-gradient(135deg, #587C55, #D4A373);
 }
 
+.bird-art[data-bird="2"] {
+    background: linear-gradient(135deg, #367C91, #D4A373);
+}
+
+.bird-art[data-bird="3"] {
+    background: linear-gradient(135deg, #6D8060, #AFC6B5);
+}
 
 .bird-art.bird-image::after {
     display: none;
@@ -584,210 +307,266 @@ textarea {
     display: block;
 }
 
-
-.bird-one {
-    background:
-        linear-gradient(
-            135deg,
-            #587C55,
-            #D4A373
-        );
+/* Fallback decorative dots */
+.bird-art:not(.bird-image)::after {
+    content: "●";
+    font-size: 4.5rem;
+    color: var(--white);
+    text-shadow: 45px -10px 0 rgba(255, 255, 255, 0.8);
 }
 
-
-.bird-two {
-    background:
-        linear-gradient(
-            135deg,
-            #367C91,
-            #D4A373
-        );
+/* ---------- TINTED SECTION ---------- */
+.tinted {
+    background-color: rgba(212, 163, 115, 0.22);
+    padding: 2rem;
+    border-radius: var(--radius);
 }
 
-
-.bird-three {
-    background:
-        linear-gradient(
-            135deg,
-            #6D8060,
-            #AFC6B5
-        );
+/* ---------- SAFETY ---------- */
+.safety-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    background-color: var(--white);
+    padding: 2rem;
+    border-left: 7px solid var(--rust);
+    border-radius: var(--radius);
 }
 
-
-/* ---------- RESULT ---------- */
-
-.result-box {
-    min-height: 80px;
-
+.check-list {
+    list-style: none;
     margin-top: 1rem;
-
-    padding: 1rem;
-
-    background-color: var(--cream);
-
-    border-left: 4px solid var(--rust);
 }
 
+.check-list li {
+    margin: 0.7rem 0;
+    padding-left: 1.6rem;
+    position: relative;
+}
 
-/* ---------- SIGHTINGS ---------- */
+.check-list li::before {
+    content: "✓";
+    color: var(--rust);
+    font-weight: 700;
+    position: absolute;
+    left: 0;
+}
 
-.sighting-list {
+/* ---------- PAGE BANNER ---------- */
+.page-banner {
+    background-color: var(--green);
+    color: var(--white);
+    text-align: center;
+    padding: 4rem 5%;
+}
+
+.page-banner h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.15;
+    margin: 0.4rem 0;
+}
+
+/* ---------- TWO COLUMN ---------- */
+.two-column {
     display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
 
-    gap: 1rem;
+/* ---------- FILTER ---------- */
+.filter-bar {
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 0.5rem;
+}
 
+/* ---------- FORMS ---------- */
+label {
+    display: block;
+    font-weight: 700;
     margin-bottom: 1rem;
 }
 
-
-.sighting-item {
+input,
+select,
+textarea {
+    width: 100%;
+    margin-top: 0.35rem;
+    padding: 0.75rem;
+    border: 1px solid #A9AFA9;
+    border-radius: 0.35rem;
+    font: inherit;
     background-color: var(--white);
-
-    border: 1px solid var(--border);
-
-    border-radius: 0.5rem;
-
-    padding: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-
-.sighting-item h3 {
-    font-family: "Montserrat", sans-serif;
-
-    color: var(--green);
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(212, 163, 115, 0.55);
+    border-color: var(--green);
 }
 
+textarea {
+    resize: vertical;
+}
 
 .form-message {
     margin-top: 1rem;
-
     font-weight: 700;
 }
 
-
-.danger-button {
-    background-color: var(--rust);
+/* ---------- RESULTS ---------- */
+.result-box {
+    min-height: 80px;
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: var(--cream);
+    border-left: 4px solid var(--rust);
 }
 
+/* ---------- SIGHTINGS ---------- */
+.sighting-list {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.sighting-item {
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.sighting-item h3 {
+    font-family: "Montserrat", sans-serif;
+    color: var(--green);
+}
 
 /* ---------- LINKS ---------- */
-
 .text-link {
     font-weight: 700;
 }
 
-
 /* ---------- REFERENCES ---------- */
-
 .reference-list {
     background-color: var(--white);
-
     padding: 2rem;
-
-    border-radius: 0.7rem;
+    border-radius: var(--radius);
 }
-
 
 .reference-list h2 {
     margin-bottom: 0.75rem;
 }
 
-
 .reference-list ul {
-    margin:
-        0 0 2rem 1.5rem;
+    margin: 0 0 2rem 1.5rem;
 }
 
-
 /* ---------- FOOTER ---------- */
-
 .site-footer {
     background-color: var(--green);
-
     color: var(--white);
-
     text-align: center;
-
     padding: 2rem 5%;
-
     margin-top: 4rem;
 }
 
-
-.site-footer a {
-    color: var(--sand);
-
-    display: inline-block;
-
-    margin-top: 0.4rem;
+.site-footer p {
+    margin-bottom: 0.75rem;
 }
 
+.footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
 
+.footer-links a {
+    color: var(--sand);
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.footer-links a:hover {
+    color: var(--white);
+    background-color: rgba(212, 163, 115, 0.2);
+}
+
+.footer-divider {
+    color: rgba(255, 255, 255, 0.3);
+    user-select: none;
+}
 /* =========================================
-   MOBILE RESPONSIVE DESIGN
+   RESPONSIVE DESIGN
 ========================================= */
 
+/* Mobile */
 @media (max-width: 800px) {
-
     .menu-button {
         display: block;
     }
 
-
     .main-nav {
         display: none;
-
         width: 100%;
-
         flex-direction: column;
-
         align-items: stretch;
     }
-
 
     .main-nav.open {
         display: flex;
     }
 
-
     .site-header {
         flex-wrap: wrap;
     }
 
-
     .main-nav a {
         text-align: center;
+        padding: 0.6rem 0;
     }
-
 
     .fact-grid,
     .feature-grid,
     .bird-grid,
+    .gallery-grid,
     .two-column {
         grid-template-columns: 1fr;
     }
 
-
     .safety-section {
         flex-direction: column;
-
         align-items: flex-start;
     }
-
 }
 
+/* Tablet */
+@media (min-width: 801px) and (max-width: 1024px) {
+    .fact-grid,
+    .feature-grid,
+    .bird-grid,
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
-/* =========================================
-   LARGE SCREENS
-========================================= */
-
-@media (min-width: 801px) {
-
+/* Large Screens */
+@media (min-width: 1025px) {
     .site-header {
         padding-left: 8%;
-
         padding-right: 8%;
     }
-
 }

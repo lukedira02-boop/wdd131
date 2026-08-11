@@ -1,13 +1,14 @@
-/* =========================
-   Reset & Base Styles
-========================= */
+/* =========================================
+   SITE PLAN STYLES
+   WDD 131 PROJECT
+========================================= */
 
+/* Reset & Base Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 
 body {
     font-family: "Roboto", Arial, sans-serif;
@@ -16,405 +17,218 @@ body {
     line-height: 1.6;
 }
 
-
-/* =========================
-   Container
-========================= */
-
+/* Container */
 .container {
     max-width: 1100px;
     margin: auto;
     padding: 20px;
 }
 
-
-
-/* =========================
-   Header
-========================= */
-
+/* Header */
 .site-header {
-
     background-color: #2C5E3B;
     color: white;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     padding: 1rem 2rem;
-
     position: sticky;
     top: 0;
-
     z-index: 10;
-
 }
 
-
 .logo-container {
-
     display: flex;
     align-items: center;
     gap: 12px;
-
 }
-
 
 .logo-img {
-
     width: 50px;
     height: 50px;
-
     object-fit: contain;
-
 }
-
 
 .logo-text {
-
     font-family: "Montserrat", sans-serif;
-
     font-size: 1.2rem;
-
     font-weight: 700;
-
 }
-
-
-
-
 
 /* Navigation */
-
 .nav-links {
-
     display: flex;
-
     list-style: none;
-
     gap: 1.5rem;
-
 }
-
-
 
 .nav-links a {
-
     color: white;
-
     text-decoration: none;
-
     font-weight: 500;
-
 }
-
-
 
 .nav-links a:hover {
-
     color: #D4A373;
-
 }
 
-
-
-
-
-/* =========================
-   Hero Section
-========================= */
-
-
+/* Hero Section */
 .hero {
-
     text-align: center;
-
     padding: 3rem 1rem;
-
 }
-
-
 
 .hero h1 {
-
     font-family: "Montserrat", sans-serif;
-
     color: #2C5E3B;
-
     font-size: 2.5rem;
-
     margin-bottom: 1rem;
-
 }
-
 
 .hero p {
-
     font-size: 1.1rem;
-
 }
 
-
-
-
-
-/* =========================
-   Content Sections
-========================= */
-
-
+/* Content Sections */
 .plan-section {
-
     background-color: white;
-
     padding: 2rem;
-
     margin: 2rem 0;
-
     border-radius: 10px;
-
     box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-
 }
-
-
 
 .plan-section h2 {
-
     font-family: "Montserrat", sans-serif;
-
     color: #2C5E3B;
-
     border-bottom: 3px solid #D4A373;
-
     padding-bottom: .5rem;
-
     margin-bottom: 1rem;
-
 }
-
-
 
 .plan-section h3 {
-
     font-family: "Montserrat", sans-serif;
-
     color: #2C5E3B;
-
 }
-
-
 
 .plan-section ul {
-
     margin-left: 1.5rem;
-
 }
-
-
 
 .plan-section li {
-
     margin-bottom: .5rem;
-
 }
 
-
-
-
-
-/* =========================
-   Color Scheme Table
-========================= */
-
-
+/* Color Scheme Table */
 table {
-
     width: 100%;
-
     border-collapse: collapse;
-
     margin-top: 1rem;
-
 }
-
-
 
 th {
-
     background-color: #2C5E3B;
-
     color: white;
-
     padding: 12px;
-
 }
-
-
 
 td {
-
     border: 1px solid #ddd;
-
     padding: 12px;
-
 }
-
-
 
 tr:nth-child(even) {
-
     background-color: #F4F1DE;
-
 }
 
-
-
-
-
-/* =========================
-   Typography Examples
-========================= */
-
-
+/* Typography Examples */
 .heading-example {
-
     font-family: "Montserrat", sans-serif;
-
     color: #2C5E3B;
-
     font-size: 1.8rem;
-
 }
-
-
 
 .body-example {
-
     font-family: "Roboto", sans-serif;
-
 }
 
-
-
-
-
-/* =========================
-   Wireframes
-========================= */
-
-
+/* Wireframes */
 .wireframe-container {
-
     display: grid;
-
     grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
-
     gap: 2rem;
-
     margin-top: 2rem;
-
 }
-
-
 
 .wireframe-container div {
-
     background-color: #F4F1DE;
-
     padding: 1rem;
-
     border-radius: 8px;
-
     text-align: center;
-
 }
-
-
 
 .wireframe-container img {
-
     max-width: 100%;
-
     height: auto;
-
     border: 2px solid #D4A373;
-
     border-radius: 5px;
-
 }
 
-
-
-
-
-/* =========================
-   Footer
-========================= */
-
-
+/* Footer */
 .site-footer {
-
     background-color: #2C5E3B;
-
     color: white;
-
     text-align: center;
-
     padding: 2rem;
-
     margin-top: 3rem;
-
 }
 
+.footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}
 
+.footer-links a {
+    color: #D4A373;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    transition: all 0.3s ease;
+}
 
+.footer-links a:hover {
+    color: white;
+    background-color: rgba(212, 163, 115, 0.2);
+}
 
+.footer-divider {
+    color: rgba(255, 255, 255, 0.3);
+    user-select: none;
+}
 
-/* =========================
-   Mobile Responsive
-========================= */
-
-
-@media screen and (max-width:768px){
-
-
+/* Mobile Responsive */
+@media screen and (max-width:768px) {
     .site-header {
-
         flex-direction: column;
-
         gap: 1rem;
-
     }
-
-
 
     .nav-links {
-
         flex-direction: column;
-
         text-align: center;
-
         gap: .8rem;
-
     }
-
-
 
     .hero h1 {
-
         font-size: 2rem;
-
     }
-
-
 
     .plan-section {
-
         padding: 1.2rem;
-
     }
-
-
 }

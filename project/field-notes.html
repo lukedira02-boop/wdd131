@@ -1,387 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <meta name="description"
-          content="Record bird sightings and estimate the best bird watching time based on season and weather.">
-
-    <meta name="author"
-          content="Dira Luke">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Record bird sightings and estimate the best bird watching time based on season and weather.">
+    <meta name="author" content="Dira Luke">
     <title>Interactive Field Notes | Wildlife Guide</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500;700&display=swap"
-          rel="stylesheet">
-
-    <link rel="stylesheet"
-          href="styles/project.css">
-
-    <script src="scripts/project.js"
-            defer>
-    </script>
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/project.css">
+    <script src="scripts/project.js" defer></script>
 </head>
-
-
 <body>
 
 <header class="site-header">
-
-    <a class="brand"
-       href="index.html">
-
-        <span class="brand-mark"
-              aria-hidden="true">
-            🦜
-        </span>
-
-        <span>
-            Wildlife & Bird Watching Guide
-        </span>
-
+    <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">🦜</span>
+        <span>Wildlife & Bird Watching Guide</span>
     </a>
 
-
-    <button class="menu-button"
-            type="button"
-            aria-label="Open navigation menu"
-            aria-expanded="false">
-
+    <button class="menu-button" type="button" aria-label="Open navigation menu" aria-expanded="false">
         ☰
-
     </button>
 
-
-    <nav class="main-nav"
-         aria-label="Main navigation">
-
-        <a href="index.html">
-            Home
-        </a>
-
-        <a href="birds.html">
-            Birds
-        </a>
-
-        <a class="active"
-           href="field-notes.html">
-            Field Notes
-        </a>
-
-        <a href="resources.html">
-            Resources
-        </a>
-
+    <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="birds.html">Birds</a>
+        <a class="active" href="field-notes.html">Field Notes</a>
+        <a href="resources.html">Resources</a>
     </nav>
-
 </header>
 
-
 <main>
-
     <section class="page-banner">
-
-        <p class="eyebrow">
-            Interactive Journal
-        </p>
-
-        <h1>
-            Field Notes
-        </h1>
-
-        <p>
-            Record your bird sightings and estimate a good
-            time for your next bird watching trip.
-        </p>
-
+        <p class="eyebrow">Interactive Journal</p>
+        <h1>Field Notes</h1>
+        <p>Record your bird sightings and estimate a good time for your next bird watching trip.</p>
     </section>
-
 
     <section class="section two-column">
-
-
         <!-- FORM -->
-
         <div class="card form-card">
+            <h2>Record a Bird Sighting</h2>
 
-            <h2>
-                Record a Bird Sighting
-            </h2>
-
-
-            <form id="sighting-form">
-
+            <form id="sighting-form" novalidate>
                 <label for="bird-name">
-
                     Bird Species
-
-                    <input
-                        id="bird-name"
-                        name="birdName"
-                        type="text"
-                        required
-                        minlength="2"
-                        placeholder="Example: African Fish Eagle">
-
+                    <input id="bird-name" name="birdName" type="text" required minlength="2" placeholder="Example: African Fish Eagle">
                 </label>
-
 
                 <label for="location">
-
                     Location
-
-                    <input
-                        id="location"
-                        name="location"
-                        type="text"
-                        required
-                        minlength="2"
-                        placeholder="Example: Lake or park">
-
+                    <input id="location" name="location" type="text" required minlength="2" placeholder="Example: Lake or park">
                 </label>
-
 
                 <label for="sighting-date">
-
                     Date
-
-                    <input
-                        id="sighting-date"
-                        name="date"
-                        type="date"
-                        required>
-
+                    <input id="sighting-date" name="date" type="date" required>
                 </label>
-
 
                 <label for="sighting-time">
-
                     Time
-
-                    <input
-                        id="sighting-time"
-                        name="time"
-                        type="time"
-                        required>
-
+                    <input id="sighting-time" name="time" type="time" required>
                 </label>
-
 
                 <label for="weather">
-
                     Weather
-
-                    <select
-                        id="weather"
-                        name="weather"
-                        required>
-
-                        <option value="">
-                            Choose weather
-                        </option>
-
-                        <option value="clear">
-                            Clear
-                        </option>
-
-                        <option value="cloudy">
-                            Cloudy
-                        </option>
-
-                        <option value="light-rain">
-                            Light Rain
-                        </option>
-
-                        <option value="windy">
-                            Windy
-                        </option>
-
+                    <select id="weather" name="weather" required>
+                        <option value="">Choose weather</option>
+                        <option value="clear">Clear</option>
+                        <option value="cloudy">Cloudy</option>
+                        <option value="light-rain">Light Rain</option>
+                        <option value="windy">Windy</option>
                     </select>
-
                 </label>
-
 
                 <label for="notes">
-
                     Observation Notes
-
-                    <textarea
-                        id="notes"
-                        name="notes"
-                        rows="4"
-                        required
-                        placeholder="Describe what you saw...">
-                    </textarea>
-
+                    <textarea id="notes" name="notes" rows="4" required placeholder="Describe what you saw..."></textarea>
                 </label>
 
-
-                <button class="button"
-                        type="submit">
-
-                    Save Sighting
-
-                </button>
-
+                <button class="button" type="submit">Save Sighting</button>
             </form>
 
-
-            <p id="form-message"
-               class="form-message"
-               role="status">
-            </p>
-
+            <p id="form-message" class="form-message" role="status"></p>
         </div>
-
 
         <!-- RECOMMENDATION -->
-
         <aside class="card recommendation-card">
-
-            <p class="eyebrow">
-                Best Time Guide
-            </p>
-
-            <h2>
-                When Should I Go?
-            </h2>
-
-            <p>
-                Choose a season and weather condition to
-                receive a simple bird watching recommendation.
-            </p>
-
+            <p class="eyebrow">Best Time Guide</p>
+            <h2>When Should I Go?</h2>
+            <p>Choose a season and weather condition to receive a simple bird watching recommendation.</p>
 
             <label for="season">
-
                 Season
-
                 <select id="season">
-
-                    <option value="dry">
-                        Dry Season
-                    </option>
-
-                    <option value="wet">
-                        Wet Season
-                    </option>
-
-                    <option value="transition">
-                        Transition Season
-                    </option>
-
+                    <option value="dry">Dry Season</option>
+                    <option value="wet">Wet Season</option>
+                    <option value="transition">Transition Season</option>
                 </select>
-
             </label>
-
 
             <label for="time-weather">
-
                 Weather
-
                 <select id="time-weather">
-
-                    <option value="clear">
-                        Clear
-                    </option>
-
-                    <option value="cloudy">
-                        Cloudy
-                    </option>
-
-                    <option value="light-rain">
-                        Light Rain
-                    </option>
-
-                    <option value="windy">
-                        Windy
-                    </option>
-
+                    <option value="clear">Clear</option>
+                    <option value="cloudy">Cloudy</option>
+                    <option value="light-rain">Light Rain</option>
+                    <option value="windy">Windy</option>
                 </select>
-
             </label>
 
+            <button class="button" id="recommend-button" type="button">Estimate Best Time</button>
 
-            <button class="button"
-                    id="recommend-button"
-                    type="button">
-
-                Estimate Best Time
-
-            </button>
-
-
-            <div id="recommendation"
-                 class="result-box"
-                 aria-live="polite">
-
-            </div>
-
+            <div id="recommendation" class="result-box" aria-live="polite"></div>
         </aside>
-
     </section>
-
 
     <!-- SAVED SIGHTINGS -->
-
     <section class="section">
-
         <div class="section-heading">
-
-            <p class="eyebrow">
-                Saved Locally
-            </p>
-
-            <h2>
-                My Sightings
-            </h2>
-
+            <p class="eyebrow">Saved Locally</p>
+            <h2>My Sightings</h2>
         </div>
 
+        <div id="saved-sightings" class="sighting-list" aria-live="polite"></div>
 
-        <div id="saved-sightings"
-             class="sighting-list"
-             aria-live="polite">
-
-        </div>
-
-
-        <button id="clear-sightings"
-                class="button danger-button"
-                type="button">
-
-            Clear Saved Sightings
-
-        </button>
-
+        <button id="clear-sightings" class="button danger-button" type="button">Clear Saved Sightings</button>
     </section>
-
 </main>
 
-
 <footer class="site-footer">
-
-    <p>
-        &copy; 2026 Dira Luke |
-        Wildlife & Bird Watching Guide
-    </p>
-
-    <a href="references.html">
-        References
-    </a>
-
+    <p>&copy; 2026 Dira Luke | Wildlife & Bird Watching Guide</p>
+     <div class="footer-links">
+        <a href="references.html">References</a>
+        <span class="footer-divider">|</span>
+        <a href="siteplan.html">Site Plan</a>
+    </div>
 </footer>
 
 </body>
